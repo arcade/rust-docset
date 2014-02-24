@@ -56,7 +56,7 @@ impl Docset {
                         id: cursor.get_int(0),
                         name: cursor.get_text(1),
                         category: cursor.get_text(2),
-                        path: self.path.join(cursor.get_text(3))
+                        path: self.path.join("Contents/Resources/Documents").join(cursor.get_text(3))
                     });
                 }
             }
